@@ -117,7 +117,20 @@ protected List<ReactPackage> getPackages() {
 
 #### 3.1 Android
 
-Before you can run the project, follow the [Getting Started Guide](https://developers.facebook.com/docs/android/getting-started/) for Facebook Android SDK to set up a Facebook app. You can skip the build.gradle changes since that's taken care of by the rnpm link step above, but **make sure** you follow the rest of the steps such as updating `strings.xml` and `AndroidManifest.xml`.
+Use the steps below, as a subset of instructions from the [Getting Started Guide](https://developers.facebook.com/docs/android/getting-started/)
+
+1. Add the following into `android/app/src/main/AndroidManifest.xml`:
+
+   ```
+   <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+   ```
+2. Add the following into `android/app/src/main/res/values/strings.xml`:
+
+   ```
+   <string name="facebook_app_id">XXXXXXX</string>
+   ```
+
+   You can find this id in your Facebook app's Basic Settings.
 
 #### 3.2 iOS
 
